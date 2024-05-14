@@ -1,3 +1,4 @@
+import 'package:books_app/src/config/theme/app_colors_config.dart';
 import 'package:books_app/src/config/theme/app_text_style_config.dart';
 import 'package:books_app/src/domain/models/books.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: <Widget>[
+        children: [
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -35,7 +36,10 @@ class DetailsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AppBar(
-                      title: Text(booksDetail.title),
+                      title: Text(
+                        booksDetail.title,
+                        style: AppTextStyleConfig.titleStyle,
+                      ),
                       backgroundColor: Colors.transparent,
                       elevation: 0,
                     ),
@@ -50,7 +54,7 @@ class DetailsScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     Card(
-                      color: Colors.white70,
+                      color: AppColorsConfig.whiteColorWithOpacity,
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
@@ -58,23 +62,24 @@ class DetailsScreen extends StatelessWidget {
                           children: [
                             Text(
                               booksDetail.subtitle,
-                              style: AppTextStyleConfig.subtitleStyle,
+                              style: AppTextStyleConfig.buttonTextStyle,
                             ),
                             const SizedBox(height: 5),
                             Text(
                               "ISBN: ${booksDetail.isbn13}",
-                              style: AppTextStyleConfig.subtitleStyle,
+                              style: AppTextStyleConfig.buttonTextStyle,
                             ),
                             const SizedBox(height: 5),
                             Text(
                               "Price: ${booksDetail.price}",
-                              style: AppTextStyleConfig.subtitleStyle,
+                              style: AppTextStyleConfig.buttonTextStyle,
                             ),
                             const SizedBox(height: 5),
                             Text(
                               "URL: ${booksDetail.url}",
-                              style: AppTextStyleConfig.subtitleStyle,
+                              style: AppTextStyleConfig.buttonTextStyle,
                             ),
+                            const SizedBox(height: 15),
                           ],
                         ),
                       ),

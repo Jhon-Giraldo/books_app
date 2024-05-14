@@ -36,7 +36,10 @@ class BooksSearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     if (query.isEmpty) {
       return const Center(
-        child: Text('Por favor ingrese un término de búsqueda'),
+        child: Text(
+          'Por favor ingrese un término de búsqueda',
+          style: AppTextStyleConfig.appbarTextStyle,
+        ),
       );
     }
 
@@ -53,7 +56,7 @@ class BooksSearchDelegate extends SearchDelegate {
                 CircularProgressIndicator(),
                 Text(
                   'Buscando libros...',
-                  style: AppTextStyleConfig.appbarTextStyle,
+                  style: AppTextStyleConfig.buttonTextStyle,
                 ),
               ],
             ),
@@ -64,7 +67,10 @@ class BooksSearchDelegate extends SearchDelegate {
           );
         } else if (snapshot.data!.isEmpty) {
           return const Center(
-            child: Text('No se encontraron resultados'),
+            child: Text(
+              'No se encontraron resultados',
+              style: AppTextStyleConfig.buttonTextStyle,
+            ),
           );
         } else {
           if (snapshot.data!.isNotEmpty) {
@@ -73,7 +79,7 @@ class BooksSearchDelegate extends SearchDelegate {
               itemCount: books.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: AppColorsConfig.cardColor2,
+                  color: AppColorsConfig.cardColor1,
                   elevation: 2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -126,7 +132,7 @@ class BooksSearchDelegate extends SearchDelegate {
                 color: AppColorsConfig.primaryColor,
               ),
               Text('Encuentra el libro que necesites',
-                  style: AppTextStyleConfig.subtitleStyle),
+                  style: AppTextStyleConfig.buttonTextStyle),
             ],
           ),
         ),

@@ -1,3 +1,5 @@
+import 'package:books_app/src/config/theme/app_colors_config.dart';
+import 'package:books_app/src/config/theme/app_text_style_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../domain/models/books.dart';
@@ -16,7 +18,7 @@ class NewBooksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: <Widget>[
+        children: [
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -26,14 +28,18 @@ class NewBooksScreen extends StatelessWidget {
             ),
           ),
           Column(
-            children: <Widget>[
+            children: [
               AppBar(
-                title: const Text('Librería Antioquia'),
+                title: Text(
+                  'Librería Antioquia',
+                  style: AppTextStyleConfig.titleStyle,
+                ),
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 actions: [
                   IconButton(
-                    icon: const Icon(Icons.search),
+                    icon: const Icon(Icons.search,
+                        color: AppColorsConfig.subtittleColor),
                     onPressed: () => showSearch(
                       context: context,
                       delegate: BooksSearchDelegate(),

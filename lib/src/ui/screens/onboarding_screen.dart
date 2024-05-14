@@ -10,7 +10,7 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: <Widget>[
+        children: [
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -19,21 +19,24 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "¡Bienvenido a Books App!",
-                  style: AppTextStyleConfig.titleStyle,
-                ),
-                SizedBox(height: 20),
-                Text(
-                  "Descubre y disfruta de una gran variedad de libros",
-                  style: AppTextStyleConfig.subtitleStyle,
-                  textAlign: TextAlign.center,
-                ),
-              ],
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "¡Bienvenido a Books App!",
+                    style: AppTextStyleConfig.titleStyle,
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    "Descubre y disfruta de una gran variedad de libros",
+                    style: AppTextStyleConfig.subtitleStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

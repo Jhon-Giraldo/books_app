@@ -10,16 +10,15 @@ class ThemeConfig {
     return ThemeData(
       useMaterial3: true,
       primaryColor: AppColorsConfig.primaryColor,
-      scaffoldBackgroundColor: AppColorsConfig.whiteColor,
+      scaffoldBackgroundColor: AppColorsConfig.subtittleColor,
       cardColor: AppColorsConfig.cardColor1,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       iconTheme: const IconThemeData(
-        color: AppColorsConfig.principalIcons,
+        color: AppColorsConfig.blackColor,
       ),
       fontFamily: 'Lora',
       textTheme: const TextTheme(
-        displayLarge: AppTextStyleConfig.logoTextStyle,
         displayMedium: AppTextStyleConfig.buttonTextStyle,
         bodyLarge: AppTextStyleConfig.appbarTextStyle,
         bodyMedium: AppTextStyleConfig.subtitleStyle,
