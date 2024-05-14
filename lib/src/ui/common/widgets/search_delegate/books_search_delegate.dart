@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../domain/models/books.dart';
+import '../../../../domain/models/gateway/recent_searchs_gateway.dart';
 import '../../../../domain/use_cases/search_books_use_case.dart';
 
 class BooksSearchDelegate extends SearchDelegate {
@@ -12,11 +13,17 @@ class BooksSearchDelegate extends SearchDelegate {
 
   @override
   List<Widget>? buildActions(BuildContext context) {
+    final recentSearchesGateway = Provider.of<RecentSearchesGateway>(
+      context,
+      listen: false,
+    );
+
     return [
       IconButton(
         icon: const Icon(Icons.clear),
         onPressed: () {
           query = '';
+          recentSearchesGateway.storeRecentSearch(query);
         },
       ),
     ];
