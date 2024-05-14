@@ -1,16 +1,27 @@
-# books_app
+# Books App
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+La Librería de Antioquia requiere ofrecer a sus clientes una aplicación móvil para la búsqueda de libros de tecnología. Esta aplicación cumple con los siguientes requisitos:
 
-This project is a starting point for a Flutter application.
+- Tiene un landing page en el cual se aprecian los libros más nuevos actuales.
+- Posee un buscador donde se ingresa el nombre del libro a consultar.
+- Muestra el listado de libros encontrados.
+- Al seleccionar un libro de la lista, presenta el detalle de este junto a la imagen asociada (ya sea en el buscador o en el landing page).
+- Almacena en memoria caché las 5 últimas búsquedas para agilizar la consulta.
 
-A few resources to get you started if this is your first Flutter project:
+La API establecida para las consultas se encuentra descrita en [itbook.store API](https://api.itbook.store/).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Funcionalidades
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Listado de nuevos Libros**: Muestra los Libros nuevos actuales.
+- **Búsqueda de Libros**: Permite buscar libros por nombre.
+- **Listado de Resultados**: Muestra una lista de libros encontrados.
+- **Detalle del Libro**: Presenta información detallada de un libro seleccionado junto con su imagen.
+- **Caché de Búsquedas**: Almacena los últimos 5 criterios de búsqueda para consultas rápidas.
+
+
+Link a la propuesta de arquitectura usando servicios de AWS, Azure, y Firebase: [Propuesta arquitectura BooksApp](https://drive.google.com/file/d/1KeNB3FkWup8qcqzUL48YaMBKpslLRqLd/view?usp=sharing)
+
+  ![image](https://github.com/Jhon-Giraldo/books_app/assets/113478991/1d3cba4d-b44d-4662-a847-484aed9692bd)
+
