@@ -1,8 +1,8 @@
-import 'package:books_app/src/config/theme/app_colors_config.dart';
-import 'package:books_app/src/config/theme/app_text_style_config.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../config/theme/app_colors_config.dart';
+import '../../../../config/theme/app_text_style_config.dart';
 import '../../../../domain/models/books.dart';
 import '../../../../domain/models/gateway/recent_searchs_gateway.dart';
 import '../../../../domain/use_cases/search_books_use_case.dart';
@@ -42,10 +42,14 @@ class BooksSearchDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     if (query.isEmpty) {
-      return const Center(
-        child: Text(
-          'Por favor ingrese un término de búsqueda',
-          style: AppTextStyleConfig.appbarTextStyle,
+      return const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Center(
+          child: Text(
+            'Por favor ingrese un término de búsqueda ',
+            style: AppTextStyleConfig.buttonTextStyle,
+            textAlign: TextAlign.center,
+          ),
         ),
       );
     }
@@ -59,11 +63,13 @@ class BooksSearchDelegate extends SearchDelegate {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CircularProgressIndicator(),
-                Text(
-                  'Buscando libros...',
-                  style: AppTextStyleConfig.buttonTextStyle,
+                CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    AppColorsConfig.cardColor1,
+                  ),
                 ),
               ],
             ),
@@ -147,10 +153,12 @@ class BooksSearchDelegate extends SearchDelegate {
     }
     return const Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircularProgressIndicator(
             valueColor: AlwaysStoppedAnimation<Color>(
-              AppColorsConfig.primaryColor,
+              AppColorsConfig.cardColor1,
             ),
           ),
         ],

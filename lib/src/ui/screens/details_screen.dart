@@ -1,8 +1,8 @@
-import 'package:books_app/src/config/theme/app_colors_config.dart';
-import 'package:books_app/src/config/theme/app_text_style_config.dart';
-import 'package:books_app/src/domain/models/books.dart';
 import 'package:flutter/material.dart';
 
+import '../../config/theme/app_colors_config.dart';
+import '../../config/theme/app_text_style_config.dart';
+import '../../domain/models/books.dart';
 import '../common/widgets/book_image_cover.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -62,7 +62,7 @@ class DetailsScreen extends StatelessWidget {
                           children: [
                             Text(
                               booksDetail.subtitle,
-                              style: AppTextStyleConfig.buttonTextStyle,
+                              style: AppTextStyleConfig.subtitleStyle,
                             ),
                             const SizedBox(height: 5),
                             Text(

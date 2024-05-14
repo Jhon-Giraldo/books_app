@@ -1,7 +1,7 @@
-import 'package:books_app/src/config/theme/app_colors_config.dart';
-import 'package:books_app/src/config/theme/app_text_style_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../config/theme/app_colors_config.dart';
+import '../../config/theme/app_text_style_config.dart';
 import '../../domain/models/books.dart';
 import '../common/widgets/book_swiper.dart';
 import '../common/widgets/search_delegate/books_search_delegate.dart';
@@ -64,7 +64,11 @@ class NewBooksScreen extends StatelessWidget {
                       child: SizedBox(
                         height: 20,
                         width: 20,
-                        child: CircularProgressIndicator(),
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            AppColorsConfig.cardColor1,
+                          ),
+                        ),
                       ),
                     );
                   },

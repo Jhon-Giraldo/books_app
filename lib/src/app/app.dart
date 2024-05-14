@@ -1,4 +1,3 @@
-import 'package:books_app/src/domain/use_cases/new_books_use_case.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -6,6 +5,7 @@ import '../config/providers/providers.dart';
 import '../config/routes/app_routes.dart';
 import '../config/theme/theme_config.dart';
 import '../domain/models/books.dart';
+import '../domain/use_cases/new_books_use_case.dart';
 import '../ui/screens/details_screen.dart';
 import '../ui/screens/new_books_screen.dart';
 import '../ui/screens/onboarding_screen.dart';

@@ -22,7 +22,7 @@ class BookInformation extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Text(
               books[index].title,
-              style: AppTextStyleConfig.subtitleStyle,
+              style: AppTextStyleConfig.titleStyle,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -32,14 +32,20 @@ class BookInformation extends StatelessWidget {
         Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 100),
-            child: Text(
-              books[index].subtitle.isEmpty
-                  ? '**Sin descripción**'
-                  : books[index].subtitle,
-              style: AppTextStyleConfig.buttonTextStyle,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 4,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.black87.withOpacity(0.4),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Text(
+                books[index].subtitle.isEmpty
+                    ? '**Sin descripción**'
+                    : books[index].subtitle,
+                style: AppTextStyleConfig.subtitleStyle,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 4,
+              ),
             ),
           ),
         ),

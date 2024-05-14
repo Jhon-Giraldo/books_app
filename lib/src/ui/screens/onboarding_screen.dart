@@ -1,7 +1,8 @@
-import 'package:books_app/src/config/theme/app_colors_config.dart';
-import 'package:books_app/src/config/theme/app_text_style_config.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
+
+import '../../config/theme/app_colors_config.dart';
+import '../../config/theme/app_text_style_config.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -25,9 +26,15 @@ class OnboardingScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "¡Bienvenido a Books App!",
-                    style: AppTextStyleConfig.titleStyle,
+                  Container(
+                    decoration: BoxDecoration(
+                      color: AppColorsConfig.whiteColorWithOpacity,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      "¡Bienvenido a Books App!",
+                      style: AppTextStyleConfig.titleStyle,
+                    ),
                   ),
                   const SizedBox(height: 20),
                   const Text(

@@ -1,5 +1,5 @@
-import 'package:books_app/src/domain/models/books.dart';
-import 'package:books_app/src/domain/models/gateway/books_gateway.dart';
+import '../models/books.dart';
+import '../models/gateway/books_gateway.dart';
 
 class SearchBooksUseCase {
   final BooksGateway _booksGateway;

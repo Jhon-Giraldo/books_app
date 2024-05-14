@@ -1,11 +1,11 @@
-import 'package:books_app/src/domain/models/books.dart';
-import 'package:books_app/src/ui/common/widgets/book_information.dart';
-import 'package:books_app/src/ui/providers/swiper_index.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../domain/models/books.dart';
+import '../../providers/swiper_index.dart';
 import 'book_image_cover.dart';
+import 'book_information.dart';
 
 class BookSwiper extends StatelessWidget {
   final List<BooksDetail> books;

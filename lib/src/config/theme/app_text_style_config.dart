@@ -17,16 +17,15 @@ class AppTextStyleConfig {
     fontStyle: FontStyle.normal,
   );
 
-  static TextStyle titleStyle = TextStyle(
+  static TextStyle titleStyle = const TextStyle(
     fontSize: 30,
-    background: Paint()..color = AppColorsConfig.whiteColorWithOpacity,
     color: AppColorsConfig.blackColor,
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.bold,
   );
 
   static const TextStyle subtitleStyle = TextStyle(
-    fontSize: 30,
+    fontSize: 20,
     color: AppColorsConfig.subtittleColor,
     fontStyle: FontStyle.italic,
     fontWeight: FontWeight.bold,
